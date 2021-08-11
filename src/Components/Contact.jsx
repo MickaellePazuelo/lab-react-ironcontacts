@@ -44,12 +44,14 @@ export class Contact extends Component {
     };
 
     sortByPopularity = () => {
-      this.state.contacts.sort (function (a, b) {
-        popularityA = a.popularity
-        popularityB = b.popularity
-        return a.popularity-b.popularity 
+      this.state({
+        contacts:[...this.state.contacts].sort(
+          (a,b)=>a.popularity - b.popularity
+        ),
+      });
 
-    }
+    };
+     deleteContact = 
 
   render() {
     return (
